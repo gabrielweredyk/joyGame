@@ -1,0 +1,5 @@
+1. place as many PNGs as you want in the "img" folder and title them in number order (e.g. 1.png, 2.png, 3.png)
+
+2. Open "sketch.js" with a text editor program
+
+3. Change the value of the variable "images" on line 1 with how many images you have (e.g. If you have 6 images, make line "var images = 6;")
