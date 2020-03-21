@@ -9,6 +9,10 @@ img{
 input {
     border: hidden;
     text-align: center;
+    background-color:#ddd;
+    width:25px;
+    height:25px;
+    margin:5px;
 }
 p {
     margin-left: 25%;
