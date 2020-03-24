@@ -1,0 +1,29 @@
+body {
+    background-image: url(img/left.png), url(img/right.png);
+    background-position: left top, right top;
+    background-repeat: no-repeat;
+    background-size: auto;
+    text-align: center;
+}
+img{
+    margin-top:20px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:10px;
+}
+input {
+    border: hidden;
+    text-align: center;
+    background-color:#ddd;
+    width:25px;
+    height:25px;
+    margin:5px;
+}
+p {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+a{
+    color:black;
+    font-size:large;
+}

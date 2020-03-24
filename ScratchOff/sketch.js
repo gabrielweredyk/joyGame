@@ -1,7 +1,7 @@
-var images = 5;
+var images = 9;
 
 var img;
-var dog;
+var hiddenImg;
 
 var points = [];
 var previous;
@@ -19,8 +19,8 @@ var colors = [Math.floor(Math.random() * 128), Math.floor(Math.random() * 128), 
 
 function setup() {
     createCanvas(800, 700);
-    dog = loadImage("img/" + (Math.floor(Math.random() * 5) + 1).toString() + ".png");
-    //dog = loadImage("https://cdn1.creativecirclemedia.com/liherald/original/20191114-115356-89714%20A%20MER%20WILD%20ART%20AS%2011_14_NORMAL_CMYK.jpg");
+    hiddenImg = loadImage("img/" + (Math.floor(Math.random() * 5) + 1).toString() + ".jpg");
+    //hiddenImg = loadImage("https://cdn1.creativecirclemedia.com/liherald/original/20191114-115356-89714%20A%20MER%20WILD%20ART%20AS%2011_14_NORMAL_CMYK.jpg");
     img = createImage(800, 600);
     img.loadPixels();
     for (let i = 0; i < img.width; i++) {
@@ -34,7 +34,7 @@ function setup() {
 function draw() {
     cursor(HAND);
     background(50);
-    image(dog, 0, 0, 800, 600);
+    image(hiddenImg, 0, 0, 800, 600);
     if (!first) {
         gap();
     }
