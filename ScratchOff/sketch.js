@@ -8,19 +8,19 @@ var previous;
 var first = true;
 var size = 0;
 
-var tints = ["#B67856", "#BCBCBC", "#BCBCBC", "#BCBCBC", "#BCBCBC", "#E2CC99", "#D9CA8F", ];
+var tints = ["#B67856", "#BCBCBC", "#BCBCBC", "#BCBCBC", "#BCBCBC", "#E2CC99"];
 var selected = [1, 0, 0, 0, 0, 0, 0];
-var sizes = [37.5, 41.75, 35.25, 47.75, 60.25, 52.15, 47.5];
+var sizes = [37.5, 41.75, 35.25, 47.75, 60.25, 52.15];
 //           2     3       1      4      6       5      4
-var pen_sizes = [2, 4, 2, 6, 10, 8, 6];
-var names = ["Penny", "Nickel", "Dime", "Quarter", "Half Dollar", "Dollar", "Half Euro"];
+var pen_sizes = [2, 4, 2, 6, 10, 8];
+var names = ["Penny", "Nickel", "Dime", "Quarter", "Half Dollar", "Dollar"];
 
 var colors = [Math.floor(Math.random() * 128), Math.floor(Math.random() * 128), Math.floor(Math.random() * 128)];
 
 function setup() {
     createCanvas(800, 700);
-    hiddenImg = loadImage("img/" + (Math.floor(Math.random() * 5) + 1).toString() + ".jpg");
-    //hiddenImg = loadImage("https://cdn1.creativecirclemedia.com/liherald/original/20191114-115356-89714%20A%20MER%20WILD%20ART%20AS%2011_14_NORMAL_CMYK.jpg");
+    //hiddenImg = loadImage("img/" + (Math.floor(Math.random() * 5) + 1).toString() + ".jpg");
+    hiddenImg = loadImage("https://cdn1.creativecirclemedia.com/liherald/original/20191114-115356-89714%20A%20MER%20WILD%20ART%20AS%2011_14_NORMAL_CMYK.jpg");
     img = createImage(800, 600);
     img.loadPixels();
     for (let i = 0; i < img.width; i++) {
@@ -94,9 +94,9 @@ function coin() {
     for (i = 0; i < tints.length; i++) {
         fill("white");
         textSize(14);
-        text(names[i], (i * 100) + 50, 645 - (sizes[i] / 2));
+        text(names[i], (i * 115) + 50, 645 - (sizes[i] / 2));
         fill(tints[i])
-        circle((i * 100) + 50, 660, sizes[i] + selected[i]);
+        circle((i * 115) + 50, 660, sizes[i] + selected[i]);
     }
     fill("white");
     text("Select a coin!", 730, 650);

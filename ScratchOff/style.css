@@ -1,0 +1,17 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background-image:url(left.png), url(right.png);
+    background-position:top left, top right;
+    background-repeat:no-repeat, no-repeat;
+
+
+    margin: 0;
+    display: flex;
+    /* This centers our sketch horizontally. */
+    justify-content: center;
+    /* This centers our sketch vertically. */
+    align-items: center;
+}
