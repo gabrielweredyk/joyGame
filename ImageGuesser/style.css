@@ -2,7 +2,7 @@ body {
     background-image: url(img/left.png), url(img/right.png);
     background-position: left top, right top;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: 429px;
     text-align: center;
 }
 img{
@@ -22,8 +22,14 @@ input {
 p {
     margin-left: 25%;
     margin-right: 25%;
+    background-color:#ffffff;
 }
 a{
     color:black;
     font-size:large;
+}
+#header {
+    background-color: #ffffff;
+    font-weight:700;
+    font-size:32px;
 }
