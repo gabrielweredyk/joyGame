@@ -108,7 +108,7 @@ function mousePressed() {
     selected = [0, 0, 0, 0, 0, 0, 0];
     let distances = [];
     for (i = 0; i < 7; i++) {
-        distances.push([distance((i * 100) + 50, 660, mouseX, mouseY), i]);
+        distances.push([distance((i * 115) + 50, 660, mouseX, mouseY), i]);
     }
     distances.sort(function (a, b) { return a[0] - b[0] });
     size = distances[0][1];
