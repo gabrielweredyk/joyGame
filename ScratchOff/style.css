@@ -3,16 +3,48 @@ html, body {
 }
 
 body {
-    background-image:url(left.png), url(right.png);
-    background-position:top left, top right;
-    background-repeat:no-repeat, no-repeat;
-    background-size:429px;
+    /*background-image: url(left.png), url(right.png);
+    background-position: left top, right top;
+    background-repeat: no-repeat;
+    background-size: 429px;*/
 
-
-    margin: 0;
-    display: flex;
-    /* This centers our sketch horizontally. */
+    margin-top: 0;
+    /*display: flex;
     justify-content: center;
-    /* This centers our sketch vertically. */
-    align-items: center;
+    align-items: center;*/
+}
+
+center{
+    margin:0;
+}
+
+#container {
+    max-width: 1080px;
+    /*text-align: center;*/
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#left, #right {
+    position: absolute;
+    z-index: -1;
+    width: 429px;
+    height: 940px;
+    margin-top: 0;
+    top: 0;
+}
+
+#left {
+    left: 0;
+}
+
+#right {
+    right: 0;
+}
+
+iframe {
+    width:800px;
+    height:700px;
+    margin-top:100px;
 }

@@ -1,9 +1,11 @@
 body {
-    background-image: url(img/left.png), url(img/right.png);
+    /*background-image: url(img/left.png), url(img/right.png);
     background-position: left top, right top;
     background-repeat: no-repeat;
-    background-size: 429px;
-    text-align: center;
+    background-size: 429px;*/
+    /*text-align: center;*/
+    margin-top: 0;
+    /*align-content: center;*/
 }
 img{
     margin-top:20px;
@@ -32,4 +34,28 @@ a{
     background-color: #ffffff;
     font-weight:700;
     font-size:32px;
+}
+#container {
+    max-width: 1080px;
+    /*text-align: center;*/
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#left, #right {
+    position: absolute;
+    z-index: -1;
+    width: 429px;
+    height: 940px;
+    margin-top: 0;
+    top: 0;
+}
+
+#left {
+    left: 0;
+}
+
+#right {
+    right: 0;
 }
