@@ -7,7 +7,7 @@ var jump = true;
 
 var selected = 0;
 
-var rounds = 10;
+var rounds = 5;
 
 var animals = ["baby", "balloons", "bird", "bubbles", "butterfly", "cocktails", "confetti", "cupcakes", "fireworks", "flowers", "icecream", "kittens", "marbles", "parrot", "penguin", "pinwheel", "puppies", "rainbow", "sunset"];
 

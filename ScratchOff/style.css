@@ -7,15 +7,19 @@ body {
     background-position: left top, right top;
     background-repeat: no-repeat;
     background-size: 429px;*/
-
     margin-top: 0;
     /*display: flex;
     justify-content: center;
     align-items: center;*/
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
 }
 
 center{
     margin:0;
+}
+
+p {
+    max-width: 800px;
 }
 
 #container {
@@ -48,3 +52,17 @@ iframe {
     height:700px;
     margin-top:100px;
 }
+
+a {
+    text-decoration: none;
+}
+
+#back {
+    text-align: right;
+    color: #E21E79;
+    font-size: large;
+}
+
+    #back:visited {
+        color: #800080;
+    }
