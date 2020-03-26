@@ -8,7 +8,7 @@ body {
     /*align-content: center;*/
     font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
 }
-img{
+#hidden-img{
     margin-top:20px;
     margin-left:auto;
     margin-right:auto;
@@ -32,7 +32,6 @@ input {
 a {
     color: black;
     font-size: large;
-    text-decoration: none;
 }
 #header {
     background-color: #ffffff;
@@ -64,16 +63,10 @@ a {
     right: 0;
 }
 
-#back {
-    text-align: right;
-    color: #E21E79;
-}
-
-    #back > p {
-        margin-right:25%;
-        background-color: rgba(0,0,0,0);
-    }
-
-#back:visited {
-    color: #800080;
+button{
+    border:none;
+    font-size:large;
+    background-color:#e0e0ff;
+    padding:5px;
+    margin:7px;
 }

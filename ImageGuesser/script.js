@@ -17,7 +17,7 @@ function ScoreDecreaser() {
     if (!finished) {
         if (score + time > 0) {
             time -= 4;
-            document.getElementById("score").innerHTML = (score + time).toString();
+            document.getElementById("score-type").innerHTML = "<strong>Score:</strong> " + (score + time).toString();
         }
         if (time / 4 >= 0) {
             document.getElementById("hidden-img").style.filter = "blur(" + (time / 4).toString() + "px)";
@@ -26,10 +26,11 @@ function ScoreDecreaser() {
     }
 }
 
-function CorrectGuess() {
+function CorrectGuess(skip) {
     var inputs = document.getElementById("inputs");
     var img = document.getElementById("hidden-img");
 
+    document.getElementById("retry").style.visibility = "hidden";
 
     stage = Math.floor(Math.random() * animals.length);
 
@@ -54,7 +55,9 @@ function CorrectGuess() {
     img.style.filter = "blur(25px)";
     if (0 > rounds) {
         finished = true;
-        document.getElementById("score-type").innerHTML = "Final Score:";
+        document.getElementById("score-type").innerHTML = "Final Score: " + (score + time).toString();
+        document.getElementById("retry").style.visibility = "visible";
+        document.getElementById("skip").style.visibility = "hidden";
         img.style.visibility = "hidden";
         while (inputs.children.length != 0) {
             inputs.removeChild(inputs.children[0]);
@@ -64,7 +67,7 @@ function CorrectGuess() {
         ScoreDecreaser();
         first = false;
     }
-    else {
+    else if (!skip){
         score += time;
         time = 100;
     }
@@ -87,7 +90,7 @@ function WordCheck(x) {
         guess += inputs.children[i].value;
     }
     if (guess == animals[stage]) {
-        CorrectGuess();
+        CorrectGuess(false);
     }
 }
 

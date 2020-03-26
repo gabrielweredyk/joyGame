@@ -8,14 +8,8 @@ var canvas;
 
 var previous;
 var first = true;
-var size = 0;
+var size = 10;
 
-var tints = ["#B67856", "#BCBCBC", "#BCBCBC", "#BCBCBC", "#BCBCBC", "#E2CC99"];
-var selected = [1, 0, 0, 0, 0, 0, 0];
-var sizes = [37.5, 41.75, 35.25, 47.75, 60.25, 52.15];
-//           2     3       1      4      6       5      4
-var pen_sizes = [2, 4, 2, 6, 10, 8];
-var names = ["Penny", "Nickel", "Dime", "Quarter", "Half Dollar", "Dollar"];
 
 var colors = [Math.floor(Math.random() * 128), Math.floor(Math.random() * 128), Math.floor(Math.random() * 128)];
 
@@ -38,6 +32,7 @@ function draw() {
     cursor(HAND);
     background(50);
     image(hiddenImg, 0, 0, 800, 600);
+    button();
     if (!first) {
         gap();
     }
@@ -51,7 +46,6 @@ function draw() {
         }
         first = false;
     }
-    coin();
     img.updatePixels();
     image(img, 0, 0);
     if (first) {
@@ -83,8 +77,8 @@ function gap() {
 
     }
     for (i = 0; i < points.length; i++) {
-        for (j = -pen_sizes[size]; j <= pen_sizes[size]; j++) {
-            for (k = -pen_sizes[size]; k <= pen_sizes[size]; k++) {
+        for (j = -size; j <= size; j++) {
+            for (k = -size; k <= size; k++) {
                 img.set(points[i][0] + j, points[i][1] + k, color(0, 0, 0, 0));
             }
         }
@@ -92,33 +86,25 @@ function gap() {
     previous = [mouseX, mouseY];
 }
 
-function coin() {
-    textAlign(CENTER, CENTER);
-    for (i = 0; i < tints.length; i++) {
-        fill("white");
-        textSize(14);
-        text(names[i], (i * 115) + 50, 645 - (sizes[i] / 2));
-        fill(tints[i])
-        circle((i * 115) + 50, 660, sizes[i] + selected[i]);
-    }
-    fill("white");
-    text("Select a coin!", 730, 650);
-}
 
 function mousePressed() {
 
     if (mouseY < 600) { return; }
-    selected = [0, 0, 0, 0, 0, 0, 0];
-    let distances = [];
-    for (i = 0; i < 7; i++) {
-        distances.push([distance((i * 115) + 50, 660, mouseX, mouseY), i]);
-    }
-    distances.sort(function (a, b) { return a[0] - b[0] });
-    size = distances[0][1];
-    selected[distances[0][1]] = 5;
-    console.log(size);
+    if (mouseX > 550 || mouseX < 250) { return; }
+    location.reload();
 }
 
 function distance(x1, y1, x2, y2) {
     return Math.sqrt(((y2 - y1) ** 2) + ((x2 - x1) ** 2));
+}
+
+function button() {
+
+    textAlign(CENTER, CENTER);
+    rectMode(CORNERS);
+    fill("#990000")
+    rect(550, 610, 250, 690);
+    fill("white");
+    textSize(24);
+    text("Give me another picture!", 400, 650)
 }
