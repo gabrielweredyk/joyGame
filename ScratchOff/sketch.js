@@ -14,7 +14,7 @@ var size = 10;
 var colors = [Math.floor(Math.random() * 128), Math.floor(Math.random() * 128), Math.floor(Math.random() * 128)];
 
 function setup() {
-    canvas = createCanvas(800, 700);
+    canvas = createCanvas(800, 600);
     canvas.parent('canvas');
     hiddenImg = loadImage("img/" + (Math.floor(Math.random() * 5) + 1).toString() + ".jpg");
     //hiddenImg = loadImage("https://cdn1.creativecirclemedia.com/liherald/original/20191114-115356-89714%20A%20MER%20WILD%20ART%20AS%2011_14_NORMAL_CMYK.jpg");
@@ -32,7 +32,6 @@ function draw() {
     cursor(HAND);
     background(50);
     image(hiddenImg, 0, 0, 800, 600);
-    button();
     if (!first) {
         gap();
     }
@@ -84,27 +83,4 @@ function gap() {
         }
     }
     previous = [mouseX, mouseY];
-}
-
-
-function mousePressed() {
-
-    if (mouseY < 600) { return; }
-    if (mouseX > 550 || mouseX < 250) { return; }
-    location.reload();
-}
-
-function distance(x1, y1, x2, y2) {
-    return Math.sqrt(((y2 - y1) ** 2) + ((x2 - x1) ** 2));
-}
-
-function button() {
-
-    textAlign(CENTER, CENTER);
-    rectMode(CORNERS);
-    fill("#990000")
-    rect(550, 610, 250, 690);
-    fill("white");
-    textSize(24);
-    text("Give me another picture!", 400, 650)
 }

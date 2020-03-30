@@ -6,21 +6,24 @@
     <title>Joyful Game Example</title>
     <script src="script.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="shortcut icon" type="image/png" href="joy.png" />
 </head>
 <body onload="CorrectGuess(false)">
-    <center >
-        <div id="container">
-
-            <div id="image">
-                <img src="joy.png" />
-            </div>
+    <div id="container">
+        <img src="joy.png" id="joy" />
+        <center>
             <img id="hidden-img" src="" width="600" height="450" />
             <br />
             <div id="inputs"></div>
             <button id="skip" onclick="CorrectGuess(true)">Skip</button>
             <p id="score-type">Score:</p>
             <button id="retry" onclick="javascript:location.reload()">Retry</button>
-        </div>
-    </center>
+        </center>
+    </div>
+    <div id="links">
+        <a href="https://www.womansworld.com/">WomansWorld.com</a>
+        |
+        <a href="https://www.firstforwomen.com/">FirstforWomen.com</a>
+    </div>
 </body>
 </html>

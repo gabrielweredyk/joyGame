@@ -5,17 +5,25 @@
     <meta charset="utf-8" />
     <title>Scratch off game!</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="shortcut icon" type="image/png" href="joy.png" />
     <!--<script src="sketch.js"></script>
     <script src="p5.js"></script>
     <script src="p5.min.js"></script>-->
 </head>
 
 <body>
-    <center>
-        <div id="image">
-            <img src="joy.png" />
-        </div>
-        <iframe src="sketch.html" scrolling="no"></iframe>
-    </center>
+    <div id="container">
+        <img src="joy.png" />
+        <center>
+            <iframe src="sketch.html" scrolling="no"></iframe>
+            <br />
+            <button onclick="javascript: location.reload();">Give me a new image!</button>
+        </center>
+    </div>
+    <div id="links">
+        <a href="https://www.womansworld.com/">WomansWorld.com</a>
+        |
+        <a href="https://www.firstforwomen.com/">FirstforWomen.com</a>
+    </div>
 </body>
 </html>

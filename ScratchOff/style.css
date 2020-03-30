@@ -3,16 +3,8 @@ html, body {
 }
 
 body {
-    /*background-image: url(left.png), url(right.png);
-    background-position: left top, right top;
-    background-repeat: no-repeat;
-    background-size: 429px;*/
     margin-top: 0;
-	background-color:#0094ff;
-    /*display: flex;
-    justify-content: center;
-    align-items: center;*/
-
+	background-color:aquamarine;
     font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
 }
 
@@ -20,33 +12,74 @@ center{
     margin:0;
 }
 
-#image {
-    max-width:1100px;
-    height:300px;
-    position:relative;
-}
-
-#container {
-    max-width: 1080px;
-    /*text-align: center;*/
-    /*position: relative;*/
-    align-items:center;
+#container, #links{
+    max-width: 1024px;
     margin-left: auto;
     margin-right: auto;
 }
 
+#container {
+    position: relative;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom:25px;
+    padding-top:25px;
+    /*height:800px;*/
+    margin-top:85px;
+}
+
+#links {
+    margin-top: 25px;
+    color: #00AEEF;
+    font-family: Arial;
+    padding-bottom: 25px;
+}
+
+    #links > a {
+        text-decoration: none;
+        color: #00AEEF;
+        font-weight: bold;
+        font-size:medium;
+    }
+
+        #links > a:visited {
+            color: #00AEEF;
+        }
+
+
 img {
     position: absolute;
-    z-index: 2;
-    left:0;
+    right:-175px;
+    top:-75px;
+    /*width:225px;
+    height:225px;*/
+    visibility:visible;
 }
+
 
 iframe {
     width:800px;
-    height:700px;
-    margin-top:10px;
+    height:600px;
+    /*margin-top:10px;*/
     /*align-self:center;*/
     /*margin-left: auto;
     margin-right: auto;*/
 }
 
+button {
+    width: 400px;
+    height: 50px;
+    border: none;
+    margin-top: 10px;
+    background-color: #00AEEF;
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: medium;
+    transition: background-color 0.15s;
+}
+
+    button:hover {
+        background-color: #009EDF;
+    }
