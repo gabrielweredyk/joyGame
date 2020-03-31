@@ -82,7 +82,12 @@ button {
         background-color: #009EDF;
     }
 
-h3, h1 {
+h3 {
     color: #00AEEF;
+    font-weight: bold;
+}
+
+h1 {
+    color: #007EBF;
     font-weight: bold;
 }

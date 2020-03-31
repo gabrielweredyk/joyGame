@@ -58,7 +58,8 @@ function CorrectGuess(skip) {
         document.getElementById("score-type").innerHTML = "Final Score: " + (score + time).toString();
         document.getElementById("retry").style.visibility = "visible";
         document.getElementById("skip").style.visibility = "hidden";
-        img.style.visibility = "hidden";
+        img.setAttribute("src", "img/finish.png");
+        img.style.filter = "blur(0px)";
         while (inputs.children.length != 0) {
             inputs.removeChild(inputs.children[0]);
         }
