@@ -31,9 +31,8 @@ a {
     color: black;
     font-size: large;
 }
-#header {
-    font-weight:700;
-    font-size:32px;
+h1 {
+    color: purple;
 }
 #container, #links {
     max-width: 1024px;
