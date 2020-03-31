@@ -5,12 +5,6 @@ body {
     font-family: Arial;
     font-weight: bold;
 }
-#hidden-img{
-    margin-top:20px;
-    margin-left:auto;
-    margin-right:auto;
-    margin-bottom:10px;
-}
 input {
     border: hidden;
     text-align: center;
@@ -23,6 +17,7 @@ input {
 #go {
     margin-left:25%;
     margin-right:25%;
+    font-weight:normal;
 }
 
 #joy {
@@ -81,4 +76,18 @@ button{
     background-color:#e0e0ff;
     padding:5px;
     margin:7px;
+}
+
+#img-score {
+    display: inline;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+#score-type {
+    position:absolute;
+    right:75px;
+    top:300px;
 }

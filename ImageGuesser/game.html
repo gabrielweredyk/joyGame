@@ -3,7 +3,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>Joyful Game Example</title>
+    <title>Image Guesser</title>
     <script src="script.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="shortcut icon" type="image/png" href="joy.png" />
@@ -11,19 +11,21 @@
 <body onload="CorrectGuess(false)">
     <div id="container">
         <img src="joy.png" id="joy" />
+        <span id="score-type"></span>
         <center>
             <img id="hidden-img" src="" width="600" height="450" />
             <br />
             <div id="inputs"></div>
+            <br />
             <button id="skip" onclick="CorrectGuess(true)">Skip</button>
-            <p id="score-type">Score:</p>
+            <br />
             <button id="retry" onclick="javascript:location.reload()">Retry</button>
         </center>
     </div>
     <div id="links">
-        <a href="https://www.womansworld.com/">WomansWorld.com</a>
+        <a target="_blank" href="https://www.womansworld.com/">WomansWorld.com</a>
         |
-        <a href="https://www.firstforwomen.com/">FirstforWomen.com</a>
+        <a target="_blank" href="https://www.firstforwomen.com/">FirstforWomen.com</a>
     </div>
 </body>
 </html>

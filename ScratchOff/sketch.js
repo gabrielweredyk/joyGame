@@ -10,13 +10,16 @@ var previous;
 var first = true;
 var size = 10;
 
+var imag = 0;
 
 var colors = [Math.floor(Math.random() * 128), Math.floor(Math.random() * 128), Math.floor(Math.random() * 128)];
 
 function setup() {
     canvas = createCanvas(800, 600);
     canvas.parent('canvas');
-    hiddenImg = loadImage("img/" + (Math.floor(Math.random() * 5) + 1).toString() + ".jpg");
+    imag = (Math.floor(Math.random() * images) + 1).toString();
+    hiddenImg = loadImage("img/" + imag + ".jpg");
+    console.log(imag);
     //hiddenImg = loadImage("https://cdn1.creativecirclemedia.com/liherald/original/20191114-115356-89714%20A%20MER%20WILD%20ART%20AS%2011_14_NORMAL_CMYK.jpg");
     img = createImage(800, 600);
     img.loadPixels();
@@ -47,13 +50,13 @@ function draw() {
     }
     img.updatePixels();
     image(img, 0, 0);
-    if (first) {
-        textAlign(CENTER, CENTER);
-        textSize(32);
-        fill("white");
-        noStroke();
-        text("Move your mouse to reveal what's underneath!", 400, 300);
-    }
+    //if (first) {
+    //    textAlign(CENTER, CENTER);
+    //    textSize(32);
+    //    fill("white");
+    //    noStroke();
+    //    text("Move your mouse to reveal what's underneath!", 400, 300);
+    //}
 }
 
 function gap() {
